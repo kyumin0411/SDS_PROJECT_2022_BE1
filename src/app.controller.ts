@@ -24,6 +24,6 @@ export class AppController {
     @Query() query: DTO.GetCovidDataReqQueryDTO,
   ) {
     const result = await this.appService.getParsedCovidData(query);
-    res.status(result.code).json();
+    res.status(result.code).json(result);
   }
 }
